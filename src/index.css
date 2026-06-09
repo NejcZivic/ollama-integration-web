@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.25); }
+
+.prose pre {
+  background: #0d0d14 !important;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  overflow-x: auto;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+.prose code {
+  background: rgba(255,255,255,0.08);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.875em;
+  font-family: ui-monospace, Consolas, monospace;
+}
+.prose pre code { background: transparent; padding: 0; }
+.prose p { margin-bottom: 0.75rem; }
+.prose ul, .prose ol { margin-bottom: 0.75rem; padding-left: 1.5rem; }
+.prose li { margin-bottom: 0.25rem; }
+.prose h1, .prose h2, .prose h3 { margin-bottom: 0.5rem; margin-top: 1rem; font-weight: 600; color: #f1f5f9; }
+.prose blockquote {
+  border-left: 3px solid rgba(139,92,246,0.6);
+  padding-left: 1rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.75rem;
+}
+.prose a { color: #a78bfa; text-decoration: underline; }
+.prose table { width: 100%; border-collapse: collapse; margin-bottom: 0.75rem; }
+.prose th, .prose td { border: 1px solid rgba(255,255,255,0.1); padding: 0.5rem 0.75rem; text-align: left; }
+.prose th { background: rgba(255,255,255,0.05); }
+
+@keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.animate-spin-slow { animation: spin-slow 2s linear infinite; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 6px rgba(139,92,246,0.4); }
+  50% { box-shadow: 0 0 18px rgba(139,92,246,0.8); }
+}
+.pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
